@@ -16,16 +16,16 @@
             <br>
             <table width="100%">
                 <tr>
-                    <td width="140px"></td>
+                    <td width="60px"></td>
                     <td style="vertical-align: middle; text-align: left;">
                         <h2 class="subcaption">
                             <span id= "submissionsNumber" class="submissionsNumber">5,000,000+</span> feedback entries submitted so far ...
                         </h2>
                     </td>
                     <td style="text-align: right;">
-                        <a href="https://youtube.googleapis.com/v/mDtfmNmRwBM&hd=1&autoplay=1&rel=0" target="_blank"><img src="images/videoTour.png" height="40px"></a>
+                        <a href="https://youtube.googleapis.com/v/mDtfmNmRwBM&hd=1&autoplay=1&rel=0" target="_blank" class="btn btn-primary">Video Tour</a>
                         &nbsp;&nbsp;
-                        <a href="request.jsp"><img src="images/requestButton.png" height="40px"></a>
+                        <a href="request.jsp" class="btn btn-success">Request a FREE Instructor Account</a>
                     </td>
                 </tr>
             </table>
