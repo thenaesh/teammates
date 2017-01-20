@@ -50,22 +50,6 @@ function checkFeedbackQuestion(form) {
         return false;
     }
     if ($(form).find('[name=' + FEEDBACK_QUESTION_TYPE + ']').val() === 'CONSTSUM') {
-        function getOptionList() {
-            return $(form).find('[name^="constSumOption"]');
-        }
-        function checkForDuplicates(optionList) {
-            var encounteredOptionStrings = [];
-            var isDuplicateEncountered = false;
-            optionList.each(function() {
-                var currentString = $(this).val();
-                if ($.inArray(currentString, encounteredOptionStrings) >= 0) {
-                    isDuplicateEncountered = true;
-                } else {
-                    encounteredOptionStrings.push(currentString);
-                }
-            });
-            return isDuplicateEncountered;
-        }
         var optionList = getOptionList();
         var hasDuplicates = checkForDuplicates(optionList);
         if (hasDuplicates) {
@@ -74,6 +58,24 @@ function checkFeedbackQuestion(form) {
         }
     }
     return true;
+}
+
+function getOptionList() {
+    return $(form).find('[name^="constSumOption"]');
+}
+
+function checkForDuplicates(optionList) {
+    var encounteredOptionStrings = [];
+    var isDuplicateEncountered = false;
+    optionList.each(function() {
+        var currentString = $(this).val();
+        if ($.inArray(currentString, encounteredOptionStrings) >= 0) {
+            isDuplicateEncountered = true;
+        } else {
+            encounteredOptionStrings.push(currentString);
+        }
+    });
+    return isDuplicateEncountered;
 }
 
 function getQuestionNumFromEditForm(form) {
